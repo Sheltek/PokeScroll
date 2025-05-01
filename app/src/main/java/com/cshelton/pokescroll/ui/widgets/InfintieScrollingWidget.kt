@@ -18,14 +18,10 @@ import androidx.paging.LoadState
 import androidx.paging.Pager
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import androidx.paging.compose.itemKey
 
-interface KeyProvider {
-    val key: Any
-}
 
 @Composable
-fun <T : KeyProvider> InfiniteScrollingWidget(
+fun <T : Any> InfiniteScrollingWidget(
     modifier: Modifier = Modifier,
     state: LazyListState = rememberLazyListState(),
     contentPadding: PaddingValues = PaddingValues(0.dp),
